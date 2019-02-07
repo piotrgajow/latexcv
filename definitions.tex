@@ -123,6 +123,9 @@
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
+%----------------------------------------------------------------------------------------
+% UPDATED DEFINITIONS
+%----------------------------------------------------------------------------------------
 
 % 1 - name
 % 2 - profile
@@ -139,4 +142,19 @@
 \newcommand{\cvheadline}[2]
 {
 \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{#1}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{#2}} } }}
+}
+
+% 1 - label
+% 2 - content with \cvmetaitem
+\newcommand{\cvmeta}[2]
+{
+\begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
+    \larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1:}} #2 [12pt]
+\end{tabular*}
+}
+
+% 1 - line with description
+\newcommand{\cvmetaitem}[1]
+{
+& #1 \\
 }
