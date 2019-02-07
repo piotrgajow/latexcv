@@ -10,8 +10,8 @@ TeX/LaTeX implementation, e.g. [MiKTeX](https://miktex.org/)
 
 **Build Procedure**
 
-- Personalize CV for your needs
-- From console run bash script `makepdf.sh` (via Git Bash, or Linux terminal)
+- Personalize CV for your needs - edit file `content.tex`
+- From console run bash script `makepdf.sh` (via Git Bash, or Linux terminal) or use other tool for creating pdf file from `main.tex`
 
 ## License
 
