@@ -56,16 +56,6 @@
 %	custom sections
 %----------------------------------------------------------------------------------------
 
-% create a coloured box with arrow and title as cv section headline
-% param 1: section title
-%
-\newcommand{\cvsection}[1]
-{
-\colorbox{sectcol}{\mystrut \makebox[1\linewidth][l]{
-\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
-}}\\
-}
-
 %create a coloured arrow with title as cv meta section section
 % param 1: meta section title
 %
@@ -157,4 +147,36 @@
 \newcommand{\cvmetaitem}[1]
 {
 & #1 \\
+}
+
+% 1 - section label
+\newcommand{\cvsection}[1]
+{
+\colorbox{sectcol}{\mystrut \makebox[1\linewidth][l]{
+\larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \hspace{-8pt} \larrow{bgcol} \textcolor{white}{\textbf{#1}}\hspace{4pt}
+}}\\
+}
+
+% 1 - Dates
+% 2 - Role
+% 3 - Organization
+% 4 - content with \cventryitem
+\newcommand{\cventry}[4]
+{
+\vspace{8pt}
+\begin{tabular*}{1\textwidth}{p{3.3cm}  p{7.8cm} x{5.9cm}}
+    \textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
+\end{tabular*}
+\vspace{-12pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+\begin{tabular*}{1\textwidth}{p{0.3cm} p{16.4cm}}
+#4
+\end{tabular*}
+}
+
+% 1 - entry description line
+\newcommand{\cventryitem}[1]
+{
+& \larrow{bgcol} #1\\[3pt]
 }
