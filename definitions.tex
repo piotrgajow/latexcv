@@ -122,3 +122,21 @@
 %----------------------------------------------------------------------------------------
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+
+% 1 - name
+% 2 - profile
+% 3 - location
+\newcommand{\cvheader}[3]
+{
+\lhead{}
+\chead{\small{#1 \hspace{1cm} $\cdot$ \hspace{1cm} #2 \hspace{1cm} $\cdot$ \hspace{1cm} #3}}
+\rhead{}
+}
+
+% 1 - name and surname
+% 2 - CV / Resume
+\newcommand{\cvheadline}[2]
+{
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\HUGE{\textcolor{white}{\textsc{#1}} } \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \HUGE{\textcolor{white}{\textsc{#2}} } }}
+}
