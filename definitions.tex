@@ -56,20 +56,6 @@
 %	custom sections
 %----------------------------------------------------------------------------------------
 
-%create a coloured arrow with title as cv meta section section
-% param 1: meta section title
-%
-\newcommand{\metasection}[2]
-{
-\begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
-\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[12pt]
-\end{tabular*}
-}
-
-%----------------------------------------------------------------------------------------
-%	 CV EVENT
-%----------------------------------------------------------------------------------------
-
 % creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
@@ -116,6 +102,11 @@
 %----------------------------------------------------------------------------------------
 % UPDATED DEFINITIONS
 %----------------------------------------------------------------------------------------
+
+\newcommand{\cvhr}[1]
+{
+\par \noindent \hspace*{#1} \textcolor{softcol} \hrulefill \par
+}
 
 % 1 - name
 % 2 - profile
@@ -173,15 +164,41 @@
 \newcommand{\cventry}[4]
 {
 \vspace{8pt}
+
 \begin{tabular*}{1\textwidth}{p{3.3cm}  p{7.8cm} x{5.9cm}}
     \textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
 \end{tabular*}
-\vspace{-12pt}
+
+\vspace{-6pt}
+
 \textcolor{softcol}{\hrule}
+
+\vspace{6pt}
+
+\begin{tabular*}{1\textwidth}{p{0.3cm} p{16.4cm}}
+#4
+\end{tabular*}
+}
+
+% 1 - Dates
+% 2 - Role
+% 3 - Organization
+% 4 - content with \cventryitem
+\newcommand{\cvsubentry}[4]
+{
+\setlength{\parindent}{5mm}
+
+\begin{tabular*}{1\textwidth}{p{3.3cm}  p{7.5cm} x{5.7cm}}
+  \textcolor{bgcol}{#1}& \textbf{#2} & \textcolor{sectcol}{#3}
+\end{tabular*}
+\vspace{-15pt}
+\cvhr{5mm}
 \vspace{6pt}
 \begin{tabular*}{1\textwidth}{p{0.3cm} p{16.4cm}}
 #4
 \end{tabular*}
+\vspace{6pt}
+\setlength{\parindent}{0mm}
 }
 
 % 1 - entry description line
